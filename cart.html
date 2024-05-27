@@ -39,9 +39,7 @@
         <nav class="navbar navbar-expand-lg navbar-light main_box">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html">
-            <a class="navbar-brand" href="index.html">Kelompok<span>7</span>
-            </a>
+            <a class="navbar-brand" href="index.html">Kelompok<span>7</span></a>
             <button
               class="navbar-toggler"
               type="button"
@@ -98,7 +96,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item submenu dropdown active">
+                <li class="nav-item submenu dropdown">
                   <a
                     href="#"
                     class="nav-link dropdown-toggle"
@@ -135,9 +133,6 @@
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="tracking.html">Tracking</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="elements.html">Elements</a>
                     </li>
                   </ul>
                 </li>
@@ -223,10 +218,55 @@
                   <td>
                     <div class="media">
                       <div class="d-flex">
-                        <img src="img/cart.jpg" alt="" />
+                        <img src="images/produk1.png" alt="" width="150" />
                       </div>
                       <div class="media-body">
-                        <p>Minimalistic shop for multipurpose use</p>
+                        <p>Air Jordan Low 1</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <h5>$360.00</h5>
+                  </td>
+                  <td>
+                    <div class="product_count">
+                      <input
+                        type="text"
+                        name="qty"
+                        id="sst"
+                        maxlength="12"
+                        value="1"
+                        title="Quantity:"
+                        class="input-text qty"
+                      />
+                      <button
+                        onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                        class="increase items-count"
+                        type="button"
+                      >
+                        <i class="lnr lnr-chevron-up"></i>
+                      </button>
+                      <button
+                        onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp &am;p sst > 0 ) result.value--;return false;"
+                        class="reduced items-count"
+                        type="button"
+                      >
+                        <i class="lnr lnr-chevron-down"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td>
+                    <h5>$720.00</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media">
+                      <div class="d-flex">
+                        <img src="images/produk3.png" alt="" width="150" />
+                      </div>
+                      <div class="media-body">
+                        <p>Air Jordan</p>
                       </div>
                     </div>
                   </td>
@@ -268,52 +308,7 @@
                   <td>
                     <div class="media">
                       <div class="d-flex">
-                        <img src="img/cart.jpg" alt="" />
-                      </div>
-                      <div class="media-body">
-                        <p>Minimalistic shop for multipurpose use</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <h5>$360.00</h5>
-                  </td>
-                  <td>
-                    <div class="product_count">
-                      <input
-                        type="text"
-                        name="qty"
-                        id="sst"
-                        maxlength="12"
-                        value="1"
-                        title="Quantity:"
-                        class="input-text qty"
-                      />
-                      <button
-                        onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                        class="increase items-count"
-                        type="button"
-                      >
-                        <i class="lnr lnr-chevron-up"></i>
-                      </button>
-                      <button
-                        onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                        class="reduced items-count"
-                        type="button"
-                      >
-                        <i class="lnr lnr-chevron-down"></i>
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <h5>$720.00</h5>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="media">
-                      <div class="d-flex">
-                        <img src="img/cart.jpg" alt="" />
+                        <img src="images/produk4.png" alt="" width="150"/>
                       </div>
                       <div class="media-body">
                         <p>Minimalistic shop for multipurpose use</p>
