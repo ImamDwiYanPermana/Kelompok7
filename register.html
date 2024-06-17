@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karma Shop - Login</title>
+    <title>Karma Shop - Register</title>
     <link rel="stylesheet" href="css/linearicons.css" />
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/themify-icons.css" />
@@ -13,37 +13,27 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script>
-      function getCookie(name) {
-        let nameEQ = name + "=";
-        let ca = document.cookie.split(";");
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) === " ") c = c.substring(1, c.length);
-          if (c.indexOf(nameEQ) === 0)
-            return c.substring(nameEQ.length, c.length);
+      function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+          let date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
         }
-        return null;
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        console.log(`Cookie set: ${name}=${value}`);
       }
 
-      function login(event) {
+      function register(event) {
         event.preventDefault();
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        const storedEmail = getCookie("email");
-        const storedPassword = getCookie("password");
+        setCookie("email", email, 7);
+        setCookie("password", password, 7);
 
-        console.log(`Stored email: ${storedEmail}, entered email: ${email}`);
-        console.log(
-          `Stored password: ${storedPassword}, entered password: ${password}`
-        );
-
-        if (email === storedEmail && password === storedPassword) {
-          alert("Login successful!");
-          window.location.href = "index.html";
-        } else {
-          alert("Invalid email or password. Please try again.");
-        }
+        alert("Registration successful! You can now log in.");
+        window.location.href = "login.html";
       }
     </script>
   </head>
@@ -116,7 +106,7 @@
               <a href="index.html"
                 >Home<span class="lnr lnr-arrow-right"></span
               ></a>
-              <a href="login.html">Login/Register</a>
+              <a href="register.html">Login/Register</a>
             </nav>
           </div>
         </div>
@@ -130,24 +120,19 @@
             <div class="login_box_img">
               <img class="img-fluid" src="images/foters2.jpeg" alt="" />
               <div class="hover">
-                <h4>New to our website?</h4>
+                <h4>Already have an account?</h4>
                 <p>
                   There are advances being made in science and technology
                   everyday, and a good example of this is the
                 </p>
-                <a class="primary-btn" href="register.html"
-                  >Create an Account</a
-                >
+                <a class="primary-btn" href="login.html">Log In</a>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="login_form_inner">
-              <h3>Log in to enter</h3>
-              <form
-                class="row login_form"
-                onsubmit="login(event); event.preventDefault();"
-              >
+              <h3>Create an account</h3>
+              <form class="row login_form" onsubmit="register(event)">
                 <div class="col-md-12 form-group">
                   <input
                     type="text"
@@ -169,8 +154,7 @@
                   />
                 </div>
                 <div class="col-md-12 form-group">
-                  <button type="submit" class="primary-btn">Log In</button>
-                  <a href="#">Forgot Password?</a>
+                  <button type="submit" class="primary-btn">Register</button>
                 </div>
               </form>
             </div>
